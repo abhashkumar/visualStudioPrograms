@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotSystem", "ParkingLotSystem\ParkingLotSystem.csproj", "{4B6FE5B9-42E7-4312-BA05-2A11293EF147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{3D999A74-CB2A-4972-B72F-042B82838192}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B6FE5B9-42E7-4312-BA05-2A11293EF147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6FE5B9-42E7-4312-BA05-2A11293EF147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6FE5B9-42E7-4312-BA05-2A11293EF147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6FE5B9-42E7-4312-BA05-2A11293EF147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D999A74-CB2A-4972-B72F-042B82838192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D999A74-CB2A-4972-B72F-042B82838192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D999A74-CB2A-4972-B72F-042B82838192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D999A74-CB2A-4972-B72F-042B82838192}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEA54B99-1F82-42A7-BBE7-B1DDD5316A28}
+	EndGlobalSection
+EndGlobal

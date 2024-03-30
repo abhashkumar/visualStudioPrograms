@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadSafeSingleton", "ThreadSafeSingleton\ThreadSafeSingleton.csproj", "{E78D0E0E-78D9-4CC8-A493-1F86EA7BC288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonWithoutSealed", "SingletonWithoutSealed\SingletonWithoutSealed.csproj", "{56986C61-99C4-4A2A-9C23-28B7EA4B086F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E78D0E0E-78D9-4CC8-A493-1F86EA7BC288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78D0E0E-78D9-4CC8-A493-1F86EA7BC288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78D0E0E-78D9-4CC8-A493-1F86EA7BC288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78D0E0E-78D9-4CC8-A493-1F86EA7BC288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56986C61-99C4-4A2A-9C23-28B7EA4B086F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56986C61-99C4-4A2A-9C23-28B7EA4B086F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56986C61-99C4-4A2A-9C23-28B7EA4B086F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56986C61-99C4-4A2A-9C23-28B7EA4B086F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A2233BC-0728-4369-AC90-A1DBF8E19D5C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLDataAccessDemo", "SQLDataAccessDemo\SQLDataAccessDemo.csproj", "{AE233E82-BC87-49C4-9C24-628A3D17BF1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webAPISql", "D:\visualStudioPrograms\webAPISql\webAPISql.csproj", "{806DBE0F-6515-4965-9EB6-3DF57BB22CD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE233E82-BC87-49C4-9C24-628A3D17BF1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE233E82-BC87-49C4-9C24-628A3D17BF1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE233E82-BC87-49C4-9C24-628A3D17BF1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE233E82-BC87-49C4-9C24-628A3D17BF1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{806DBE0F-6515-4965-9EB6-3DF57BB22CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{806DBE0F-6515-4965-9EB6-3DF57BB22CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{806DBE0F-6515-4965-9EB6-3DF57BB22CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{806DBE0F-6515-4965-9EB6-3DF57BB22CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86FA560A-7A83-4F02-B3B8-0F8813ADAB45}
+	EndGlobalSection
+EndGlobal

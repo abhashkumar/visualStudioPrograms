@@ -1,0 +1,15 @@
+*/bin/*
+*/obj/*
+*/*/bin/*
+*/*/obj/*
+*/*/*/bin/*
+*/*/*/obj/*
+*/.vs/*
+*/*/.vs/*
+*/*/*/.vs/*
+cargil
+cargil/*
+publish2
+publish2/*
+MicroServices
+Microservices/*

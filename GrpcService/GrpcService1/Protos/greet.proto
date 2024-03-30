@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService1";
+
+package greet;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  //taking message type HelloRequest as input and return message type HelloReply as output 
+  // so when you call the SayHello methdd remotely, or the client says SayHello with HelloRequest Parameter and expect HelloReply as in response
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+//this 1 is order of the property in the message
+  string name = 1;
+}
+
+//Think message as a definition of model in case of c#
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
