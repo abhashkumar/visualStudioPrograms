@@ -30,6 +30,7 @@
  * Dependency Inversion Principal: Class should depend on interfaces rather then concrete class
  * 
  * https://www.youtube.com/watch?v=XI7zep97c-Y&ab_channel=Concept%26%26Coding-byShrayansh
+ * https://www.udemy.com/course/system_design_lld_hld/learn/lecture/41932786#overview
  * 
  */
 
