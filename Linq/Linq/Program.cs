@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -18,8 +17,8 @@ namespace Linq
             var myQuery = from name in names
                           where name.Contains("ll")
                           select name;
-            foreach (var name in myQuery)
-                Console.WriteLine(name);
+            //foreach (var name in myQuery)
+             //   Console.WriteLine(name);
             Student[] studentArray = {
                     new Student() { StudentID = 1, StudentName = "John", age = 18 } ,
                     new Student() { StudentID = 2, StudentName = "Steve",  age = 21 } ,
@@ -28,6 +27,7 @@ namespace Linq
                     new Student() { StudentID = 5, StudentName = "Ron" , age = 31 } ,
                     new Student() { StudentID = 6, StudentName = "Chris",  age = 17 } ,
                     new Student() { StudentID = 7, StudentName = "Rob",age = 17  } ,
+                    new Student() { StudentID = 8, StudentName = "Roby",age = 17  } ,
                 };
             Course[] courseArray =
             {
@@ -54,47 +54,48 @@ namespace Linq
 
             var studentRolledInAnyCourse = studentArray.Join(courseArray, (x) => x.StudentID, (y) => y.StudentID, (x, y) => new
             {
-                studentID = x.StudentID,
-                courseName = y.courseName
+                x.StudentID,
+                x.StudentName,
+                y.courseName
             });
 
-            //Console.WriteLine(JsonSerializer.Serialize(studentRolledInAnyCourse));
-            /*
+            // Console.WriteLine(JsonSerializer.Serialize(studentRolledInAnyCourse));
+           
            var letOuterStudent =  studentArray.Where((x) =>
             {
-                var p = studentRolledInAnyCourse.Where(p => p.studentID == x.StudentID).ToList();
+                var p = studentRolledInAnyCourse.Where(p => p.StudentID == x.StudentID).ToList();
                 return p.Count == 0;
             }).ToList();
 
             var letOuterCourse = courseArray.Where((x) =>
             {
-                var p = studentRolledInAnyCourse.Where(p => p.studentID == x.StudentID).ToList();
+                var p = studentRolledInAnyCourse.Where(p => p.StudentID == x.StudentID).ToList();
                 return p.Count == 0;
             }).ToList();
 
-            Console.WriteLine(JsonSerializer.Serialize(letOuterStudent));
-            Console.WriteLine(JsonSerializer.Serialize(letOuterCourse));
+            // Console.WriteLine(JsonSerializer.Serialize(letOuterStudent, new JsonSerializerOptions { WriteIndented = true }));
+            //Console.WriteLine(JsonSerializer.Serialize(letOuterCourse, new JsonSerializerOptions { WriteIndented = true }));
             
             var leftOuterGroupBy = studentArray.GroupJoin(courseArray, (x) => x.StudentID, (y) => y.StudentID, (x, y) => new
             {
-                studentID = x.StudentID
+               studentId =  x.StudentID,
+               courses = y
             }).ToList();
-            Console.WriteLine(JsonSerializer.Serialize(leftOuterGroupBy));
-            */
+           //  Console.WriteLine(JsonSerializer.Serialize(leftOuterGroupBy, new JsonSerializerOptions { WriteIndented = true }));
+            
             var leftOuterGroupByCourse = courseArray.GroupJoin(studentArray, (x) => x.StudentID, (y) => y.StudentID, (x, y) => new
             {
-
-                studentID = x.StudentID,
-                courseName = x.courseName
-            }).SelectMany(x => x.courseName).ToList();
-            Console.WriteLine(JsonSerializer.Serialize(leftOuterGroupByCourse));
+                courseName = x.courseID,
+                students = y
+            }).ToList();
+            //Console.WriteLine(JsonSerializer.Serialize(leftOuterGroupByCourse, new JsonSerializerOptions { WriteIndented = true }));
 
 
             List<string> nameList = new List<string>() { "Abhash", "Kumar" };
 
             //merage all the sequene and flatten the result 
             var wholename = nameList.SelectMany(x => x);
-            Console.WriteLine(JsonSerializer.Serialize(wholename));
+            //Console.WriteLine(JsonSerializer.Serialize(wholename));
 
 
             /*
