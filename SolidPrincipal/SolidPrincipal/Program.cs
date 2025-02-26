@@ -46,12 +46,12 @@ class MotorCycle : Bike
     int speed;
     public void Accelerate()
     {
-        isEngineOn = true;
+        speed += 10;
     }
 
     public void TurnOnEngine()
     {
-        speed += 10;
+        isEngineOn = true;
     }
 }
 

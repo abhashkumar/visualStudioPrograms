@@ -7,8 +7,12 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            A a = new C();
-            a.doSomething();
+            A a0 = new A();
+            a0.doSomething();   
+            A a1 = new B();
+            a1.doSomething();
+            A a2 = new C();
+            a2.doSomething();
         }
     }
 

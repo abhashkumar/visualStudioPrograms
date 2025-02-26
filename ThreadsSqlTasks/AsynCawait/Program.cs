@@ -6,7 +6,7 @@ namespace AsynCawait
 {
     class Program
     {
-        https://www.fatalerrors.org/a/thread-task-asyncawait-iasyncresult.html
+        // https://www.fatalerrors.org/a/thread-task-asyncawait-iasyncresult.html
         static void Main(string[] args)
         {
             Console.WriteLine("-------Main thread start-------");

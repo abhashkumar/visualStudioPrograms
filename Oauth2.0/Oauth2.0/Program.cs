@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Octokit;
 internal class Program
 {
     private static void Main(string[] args)

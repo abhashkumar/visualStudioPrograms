@@ -11,7 +11,7 @@ namespace Linq
     {
         static void Main(string[] args)
         {
-            String[] names = { "Bill", "Will", "gill", "pill", "till", "Abhash" };
+            string[] names = { "Bill", "Will", "gill", "pill", "till", "Abhash" };
             int[] p = { 1, 2, 3, 4, 5 };
             int[] q = new int[5] { 2, 5, 6, 7, 8 };
             var myQuery = from name in names
@@ -32,6 +32,7 @@ namespace Linq
             Course[] courseArray =
             {
                 new Course() { courseID = 1, courseName = "A", StudentID = 1 },
+                new Course() { courseID = 1, courseName = "A", StudentID = 2 },
                 new Course() { courseID = 2, courseName = "B", StudentID = 1 },
                 new Course() { courseID = 3, courseName = "C", StudentID = 2 },
                 new Course() { courseID = 4, courseName = "D", StudentID = 2 },
@@ -73,7 +74,7 @@ namespace Linq
                 return p.Count == 0;
             }).ToList();
 
-            // Console.WriteLine(JsonSerializer.Serialize(letOuterStudent, new JsonSerializerOptions { WriteIndented = true }));
+            //Console.WriteLine(JsonSerializer.Serialize(letOuterStudent, new JsonSerializerOptions { WriteIndented = true }));
             //Console.WriteLine(JsonSerializer.Serialize(letOuterCourse, new JsonSerializerOptions { WriteIndented = true }));
             
             var leftOuterGroupBy = studentArray.GroupJoin(courseArray, (x) => x.StudentID, (y) => y.StudentID, (x, y) => new
@@ -81,21 +82,14 @@ namespace Linq
                studentId =  x.StudentID,
                courses = y
             }).ToList();
-           //  Console.WriteLine(JsonSerializer.Serialize(leftOuterGroupBy, new JsonSerializerOptions { WriteIndented = true }));
+            Console.WriteLine(JsonSerializer.Serialize(leftOuterGroupBy, new JsonSerializerOptions { WriteIndented = true }));
             
-            var leftOuterGroupByCourse = courseArray.GroupJoin(studentArray, (x) => x.StudentID, (y) => y.StudentID, (x, y) => new
-            {
-                courseName = x.courseID,
-                students = y
-            }).ToList();
-            //Console.WriteLine(JsonSerializer.Serialize(leftOuterGroupByCourse, new JsonSerializerOptions { WriteIndented = true }));
-
 
             List<string> nameList = new List<string>() { "Abhash", "Kumar" };
 
             //merage all the sequene and flatten the result 
             var wholename = nameList.SelectMany(x => x);
-            //Console.WriteLine(JsonSerializer.Serialize(wholename));
+            Console.WriteLine(JsonSerializer.Serialize(wholename));
 
 
             /*
@@ -128,8 +122,8 @@ namespace Linq
             Department d6 = new () { ID = 5, salary = 90 };
             Department d7 = new () { ID = 7, salary = 70 };
 
-            Employee E1 = new Employee() { name = "Abhash", depts =  new() {d2, d5, d7 } };
-            Employee E2 = new Employee() { name = "Kumar", depts = new () { d1, d2, d6, d7 } };
+            Employee E1 = new () { name = "Abhash", depts =  new() {d2, d5, d7 } };
+            Employee E2 = new () { name = "Kumar", depts = new () { d1, d2, d6, d7 } };
 
             ICollection<Employee> employees = new List<Employee>() { E1, E2 };
             var resultMax = employees.Select(e => new

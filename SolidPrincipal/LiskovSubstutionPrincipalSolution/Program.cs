@@ -1,6 +1,6 @@
 ﻿public class Engine
 {
-    public string Name { get; set; }
+    public string? Name { get; set; }
 }
 
 public class Vehicle
@@ -39,7 +39,7 @@ internal class Program
     }
 }
 
-// Now to fix the above issue create a call of EngineVahicle which extends Vehicle and it will have Engine class reference
+// Now to fix the above issue create a class for EngineVahicle which extends Vehicle and it will have Engine class reference
 // Car and Motorcycle will extend the EngineVehicle class and BiCycle will extend the vehicle, and vehicle call will not have
 // the engine reference
 // So you cant write vehicle.Engine.name since engine is not available in vehicle
